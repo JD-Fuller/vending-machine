@@ -1,12 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using vendingMachine.Controllers;
+using vendingMachine.Models;
+using vendingMachine.Interfaces;
 
 namespace vendingMachine
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+
+      Console.Clear();
+      VendingMachineController vm = new VendingMachineController();
+      vm.Run();
+
+
+
+
     }
+  }
 }
