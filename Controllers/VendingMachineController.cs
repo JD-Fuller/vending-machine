@@ -1,6 +1,5 @@
 using System;
-using vendingMachine.Sercvices;
-
+using vendingMachine.Services;
 
 namespace vendingMachine.Controllers
 {
@@ -25,7 +24,7 @@ namespace vendingMachine.Controllers
       }
       //I clear out the console
       Console.Clear();
-      Console.WriteLine("Thanks for the cash");
+      Console.WriteLine("Thanks for the cash - enjoy your skittles!");
     }
 
     //I get the input from the user
@@ -39,8 +38,7 @@ namespace vendingMachine.Controllers
         case 'q':
           AddCredit();
           break;
-        case 'n':
-          ReturnCredit();
+
         default:
           System.Console.WriteLine("Invalid coinage kid - we only take quarters");
           Service.PrintMenu();
