@@ -10,7 +10,7 @@ namespace vendingMachine.Services
 
 
     //This will hold my data
-    private VMachine VMachine { get; set; } = new VMachine();
+    private Vmachine VMachine { get; set; } = new Vmachine();
 
     //Collection of messages that will be drawn by the controller
     public List<string> Messages = new List<string>();
@@ -19,7 +19,7 @@ namespace vendingMachine.Services
     public void PrintMenu()
     {
       int index = 1;
-      foreach (var item in VMachine.Menu)
+      foreach (var item in Vmachine.Menu)
       {
 
         Messages.Add(index.ToString() + ") " + item.GetMenuLineItem());
@@ -33,14 +33,14 @@ namespace vendingMachine.Services
     public void PurchaseFood(string name, float price)
     {
       Food newFood = new Food(name, price);
-      VMachine.Menu.Add(newFood);
+      Vmachine.Menu.Add(newFood);
       Messages.Add($"Successfully purchased {name}");
       PrintMenu();
 
     }
   }
 
-  internal class VMachine
+  internal class Vmachine
   {
   }
 }

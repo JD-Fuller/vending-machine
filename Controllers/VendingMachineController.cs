@@ -65,11 +65,17 @@ namespace vendingMachine.Controllers
     //My job is to print messages
     private void PrintMessages()
     {
-      Console.WriteLine("Please make your selection by first inserting a quarter");
-      Console.WriteLine("");
-      Console.WriteLine("Press (q) to add a quarter to the machine");
-      Console.WriteLine("");
-      Console.WriteLine("Press (n) to quit and return quarters");
+      foreach (string message in Service.Messages)
+      {
+
+
+        Console.WriteLine("Please make your selection by first inserting a quarter");
+        Console.WriteLine("");
+        Console.WriteLine("Press (q) to add a quarter to the machine");
+        Console.WriteLine("");
+        Console.WriteLine("Press (n) to quit and return quarters");
+
+      }
 
     }
 

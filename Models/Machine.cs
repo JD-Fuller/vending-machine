@@ -5,7 +5,7 @@ using vendingMachine.Interfaces;
 namespace vendingMachine.Models
 {
 
-  class VMachine
+  class Vmachine
   {
 
     public List<IMenuItem> Menu { get; set; } = new List<IMenuItem>();
@@ -23,7 +23,7 @@ namespace vendingMachine.Models
 
 
     }
-    public VMachine()
+    public Vmachine()
     {
       Setup();
     }
